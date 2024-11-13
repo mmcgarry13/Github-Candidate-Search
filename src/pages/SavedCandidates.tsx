@@ -15,6 +15,7 @@ const SavedCandidates = () => {
         <div key={user.id} style={{ border: '1px solid #ddd', padding: '8px', margin: '8px' }}>
           <img src={user.avatar_url} alt={`${user.login}'s avatar`} width={50} height={50} />
           <h2>{user.login}</h2>
+          <h2>{user.name}</h2>
           <a href={user.html_url} target="_blank" rel="noopener noreferrer">
             View Profile
           </a>

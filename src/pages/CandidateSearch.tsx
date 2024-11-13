@@ -1,4 +1,4 @@
-import { useState } from 'react'; // add useEffect back when ready
+import { useState } from 'react';
 import { searchGithub, searchGithubUser } from '../api/API';
 import.meta.env.VITE_GITHUB_TOKEN;
 
@@ -28,6 +28,8 @@ const CandidateSearch = () => {
 
 
     const searchUser = async () => {
+      setLoading(true);
+      setError(null);
       if (!username) return; // Exit if input is empty
 
       try {
@@ -58,9 +60,8 @@ const CandidateSearch = () => {
 
     return (
       <div>
-        <h1>GitHub Users</h1>
 
-        <button onClick={fetchUsers}>Load Random GitHub Users</button>
+        <button onClick={fetchUsers}>Random GitHub Users</button>
 
         {/* Input field and search button for specific username */}
         <div style={{ marginTop: '20px' }}>

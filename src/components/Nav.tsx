@@ -7,10 +7,10 @@ const Nav = () => {
     <div>
       <Navbar
         links={[
-          <Link key={1} className="nav-link text-light" to="/">
+          <Link key={1} className="nav-link text-light nav-item" to="/">
             Candidate Search
           </Link>,
-          <Link key={2} className="nav-link text-light" to="/SavedCandidates">
+          <Link key={2} className="nav-link text-light nav-item" to="/SavedCandidates">
             Saved Candidates
           </Link>,
         ]}
